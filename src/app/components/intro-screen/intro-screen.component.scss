@@ -1,0 +1,19 @@
+@import "../../styles/theme";
+
+.container{
+  width: 100%;
+  height: 100%;
+  animation: fadeAwayTop forwards 1300ms;
+  animation-delay: 1800ms;
+  position: absolute;
+  background-color: mat-color($app-primary)
+}
+
+@keyframes fadeAwayTop {
+  from{
+    top: 0;
+  }
+  to{
+    top: -1000%;
+  }
+}

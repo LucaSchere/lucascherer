@@ -1,0 +1,70 @@
+@import "../../styles/theme";
+
+.name{
+  text-align: center;
+  font-weight: 400;
+  font-family: 'Staatliches', sans-serif;
+  color: white;
+}
+
+.container{
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  height: auto;
+
+
+}
+.no-overflow{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: clip;
+}
+.luca{
+  font-size: 228px;
+  position: relative;
+  animation: fadeInLeft forwards 600ms;
+  animation-delay: 300ms;
+  height: 340px;
+  left: -100%;
+}
+.scherer{
+  font-size: 121px;
+  animation: fadeInTop forwards 500ms;
+  position: relative;
+  animation-delay: 800ms;
+  top: -1000%;
+  left: 3px;
+
+}
+.cover{
+  height: 120px;
+  width: 100%;
+  top: 220px;
+  position: absolute;
+}
+
+@keyframes fadeInLeft {
+  from{
+    left: -1000%;
+  }
+  to{
+    left: 0;
+  }
+}
+@keyframes fadeInTop {
+  from{
+    top: -1000%;
+  }
+  to{
+    top: 0;
+  }
+}
+::selection{
+  color: orange;
+}
+
+@media only screen and (max-width: 850px) {
+
+}
