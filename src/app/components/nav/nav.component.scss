@@ -1,18 +1,70 @@
-.topnav{
-  justify-content: center;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  height: 60px;
+@import "../../styles/theme";
+
+$height: 60px;
+
+
+.container{
+  width: 100%;
+  height: $height;
+  background-color: mat-color($app-primary);
+
+  box-shadow: 0 3px 5px 0 rgba(71,71,71,0.6);
 }
-.topnav-item{
-  justify-content: center;
-  margin: 0 5%;
-  padding: 15px 0;
-  a{
-    font-family: 'Roboto', sans-serif;
-    font-size: 30px;
+
+.side{
+  width: 50%;
+  height: 100%;
+  span{
+    font-weight: 100;
+    font-family: 'Staatliches', sans-serif;
+    color: white;
+    font-size: 28px;
+    line-height: $height;
+  }
+
+}
+
+.left{
+
+  float: left;
+  .name{
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: auto;
+    width: max-content;
+
+
+
+  }
+
+}
+.right{
+  margin-left: 50%;
+
+  ul {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 50%;
+    margin: auto;
+  }
+  li a {
+    text-decoration: none;
+    border-bottom: white 0px solid;
+  }
+  li a:hover{
+    animation: appearBorder forwards 150ms;
+  }
+}
+
+@keyframes appearBorder {
+  from{
+    border-bottom-width: 0;
+  }
+  to{
+    border-bottom-width: 3px;
   }
 }

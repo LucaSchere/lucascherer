@@ -1,4 +1,5 @@
 @import "../../styles/theme";
+@import "../../config/conf";
 
 .name{
   text-align: center;
@@ -24,16 +25,16 @@
 .luca{
   font-size: 228px;
   position: relative;
-  animation: fadeInLeft forwards 600ms;
-  animation-delay: 300ms;
+  animation: fadeInRight forwards $luca-animation;
+  animation-delay: $luca-delay;
   height: 340px;
   left: -100%;
 }
 .scherer{
   font-size: 121px;
-  animation: fadeInTop forwards 500ms;
+  animation: fadeInBottom forwards $scherer-animation;
   position: relative;
-  animation-delay: 800ms;
+  animation-delay: $scherer-delay;
   top: -1000%;
   left: 3px;
 
@@ -45,7 +46,7 @@
   position: absolute;
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeInRight {
   from{
     left: -1000%;
   }
@@ -53,7 +54,7 @@
     left: 0;
   }
 }
-@keyframes fadeInTop {
+@keyframes fadeInBottom {
   from{
     top: -1000%;
   }
@@ -61,10 +62,5 @@
     top: 0;
   }
 }
-::selection{
-  color: orange;
-}
 
-@media only screen and (max-width: 850px) {
 
-}
